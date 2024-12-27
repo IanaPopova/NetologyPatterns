@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/qw6m6a2sy2cp2qq0?svg=true)](https://ci.appveyor.com/project/IanaPopova/netologypatterns)
