@@ -3,6 +3,10 @@ package ru.netology.web.test;
 import com.codeborne.selenide.Condition;
 
 import com.codeborne.selenide.Selectors;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
@@ -17,6 +21,16 @@ import static java.time.Duration.ofSeconds;
 import ru.netology.web.data.DataGenerator;
 
 class ReplanDeliveryTest {
+
+    @BeforeAll
+    static void setUpAll() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
+
+    @AfterAll
+    static void tearDownAll() {
+        SelenideLogger.removeListener("allure");
+    }
 
     @BeforeEach
     void setup() {
@@ -53,5 +67,11 @@ class ReplanDeliveryTest {
         $("[data-test-id='success-notification'] .notification__content")
                 .shouldBe(visible, Duration.ofSeconds(15))
                 .shouldHave(text("Встреча успешно запланирована на " + secondMeetingDate));
+    }
+
+    @Test
+    void shouldFailTest() {
+        open("http://localhost:9999");
+        $("[data-test-id='non-existent-element']").shouldBe(visible, Duration.ofSeconds(5)); // Элемент точно не существует
     }
 }
