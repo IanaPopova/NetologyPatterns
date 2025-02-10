@@ -1,1 +1,2 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/qw6m6a2sy2cp2qq0?svg=true)](https://ci.appveyor.com/project/IanaPopova/netologypatterns)
+
+![Скриншот из упавшего теста](https://github.com/user-attachments/assets/6a84d65c-335a-42a8-ac35-5a7c623479ec)
