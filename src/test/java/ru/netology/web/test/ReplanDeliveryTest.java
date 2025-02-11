@@ -68,10 +68,4 @@ class ReplanDeliveryTest {
                 .shouldBe(visible, Duration.ofSeconds(15))
                 .shouldHave(text("Встреча успешно запланирована на " + secondMeetingDate));
     }
-
-    @Test
-    void shouldFailTest() {
-        open("http://localhost:9999");
-        $("[data-test-id='non-existent-element']").shouldBe(visible, Duration.ofSeconds(5)); // Элемент точно не существует
-    }
 }
