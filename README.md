@@ -1,2 +1,2 @@
+![Allure report](https://github.com/user-attachments/assets/ec53c680-dc95-4457-bcb2-d03ef3e6a1bc)
 
-![Скриншот из упавшего теста](https://github.com/user-attachments/assets/6a84d65c-335a-42a8-ac35-5a7c623479ec)
